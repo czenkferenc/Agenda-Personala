@@ -10,6 +10,7 @@ namespace Agenda_Personala
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
