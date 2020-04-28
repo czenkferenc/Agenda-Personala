@@ -21,6 +21,15 @@ namespace Agenda_Personala
             this.actID = nextid;
         }
 
+        public Activitate(string nume, Data inceput, Data final)
+        {
+            nextID();
+            this.actID = nextid;
+            this.nume = nume;
+            this.dataInceput = inceput;
+            this.dataFinal = final;
+        }
+
         public Activitate(string nume, Persoana participant, Data inceput, Data final)
         {
             nextID();

@@ -40,7 +40,7 @@ namespace Agenda_Personala
             {
                 this.activitati.Add(a);
                 a.Participanti.Add(this.proprietar);
-                Console.WriteLine("Activitate " + a.ToString() + " a fost adaugata " + this.proprietar.Nume);
+                Console.WriteLine("Activitate: " + a.ToString() + " a fost adaugata in agenda persoanei: " + this.proprietar.Nume + " " + this.proprietar.Prenume);
             }
         }
 
@@ -49,6 +49,24 @@ namespace Agenda_Personala
             this.activitati.Remove(a);
             a.Participanti.Remove(this.proprietar);
             Console.WriteLine("Activitate " + a.ToString() + " a fost stearsa");
+        }
+
+        public void RaportActivitati(Data a, Data b)
+        {
+            Activitate tempAct = new Activitate("act temp", a, b);
+            Console.WriteLine("Activitatile persoanei intre: " + a.ToString() + " - " + b.ToString());
+            foreach (Activitate act in this.activitati)
+            {
+                if ((act.DataInceput <= tempAct.DataInceput && tempAct.DataInceput <= act.DataFinal) || (act.DataInceput <= tempAct.DataFinal && tempAct.DataFinal <= act.DataFinal))
+                {
+                    Console.WriteLine(act.ToString());
+                }
+            }
+        }
+
+        public void GasesteTimp(Agenda a, Agenda b)
+        {
+
         }
     }
 }
