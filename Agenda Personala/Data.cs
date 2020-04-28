@@ -70,5 +70,10 @@ namespace Agenda_Personala
             Data newData = new Data(y,m,d,h,M);
             return newData;
         }
+
+        public override string ToString()
+        {
+            return this.an + "." + this.luna + "." + this.zi + " " + this.ora + ":" + this.minut; 
+        }
     }
 }
