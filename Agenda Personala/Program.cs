@@ -10,6 +10,25 @@ namespace Agenda_Personala
     {
         static void Main(string[] args)
         {
+            Persoana p1 = new Persoana("a", "b");
+            Persoana p2 = new Persoana("c", "d");
+            Persoana p3 = new Persoana("e", "f");
+
+            Data data1 = new Data(2017,12,23,15,00);
+            Data data2 = new Data(2017, 12, 23, 20, 00);
+            Data data3 = new Data(2017, 12, 23, 16, 00);
+            Data data4 = new Data(2017, 12, 23, 21, 00);
+
+            Activitate act1 = new Activitate("asd", p1, data1, data2);
+            Activitate act2 = new Activitate("fgh", p3, data3, data4);
+
+            Agenda ag1 = new Agenda(p2);
+
+            ag1.AdaugaActivitate(act1);
+            ag1.AdaugaActivitate(act2);
+
+            foreach (Persoana p in act2.Participanti)
+                Console.WriteLine(p.Nume + " " + p.Prenume);
         }
     }
 }

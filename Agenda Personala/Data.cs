@@ -75,5 +75,19 @@ namespace Agenda_Personala
         {
             return this.an + "." + this.luna + "." + this.zi + " " + this.ora + ":" + this.minut; 
         }
+         
+        public static bool operator <= (Data a, Data b)
+        {
+            DateTime date1 = new DateTime(a.an, a.luna, a.zi, a.ora, a.minut, 0);
+            DateTime date2 = new DateTime(b.an, b.luna, b.zi, b.ora, b.minut, 0);
+            return date1 <= date2;
+        }
+
+        public static bool operator >=(Data a, Data b)
+        {
+            DateTime date1 = new DateTime(a.an, a.luna, a.zi, a.ora, a.minut, 0);
+            DateTime date2 = new DateTime(b.an, b.luna, b.zi, b.ora, b.minut, 0);
+            return date1 >= date2;
+        }
     }
 }

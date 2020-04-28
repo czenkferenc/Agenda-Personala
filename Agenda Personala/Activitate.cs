@@ -104,5 +104,15 @@ namespace Agenda_Personala
             if (this.descriere != null) return this.nume + " :\t " + this.descriere + " ;\t Inceput: " + dataInceput.ToString() + " ;\t Final: " + dataFinal.ToString(); 
             else return this.nume + " ;\t Inceput: " + dataInceput.ToString() + " ;\t Final: " + dataFinal.ToString(); 
         }
+
+        public void AdaugaPersoana(Persoana p)
+        {
+            this.participanti.Add(p);
+        }
+        
+        public void StergePersoana(Persoana p)
+        {
+            this.participanti.Remove(p);
+        }
     }
 }
